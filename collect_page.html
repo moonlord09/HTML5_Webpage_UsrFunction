@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=1125){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 1125) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+    <title>我的收藏</title>
+    <script type="text/javascript">
+        /* var posts = document.getElementsByClassName("posts_button");
+        var mktcdt = document.getElementsByClassName("mktcdt_button");
+        var postscontent = document.getElementsByClassName("posts");
+        var mktcdtcontent = document.getElementsByClassName("mktdct");
+        posts.onclick = function() {
+            postscontent.style.display = "block";
+            mktcdtcontent.style.display = "none";
+        }
+        mktcdt.onclick=function () {
+            mktcdtcontent.style.display="block";
+            postscontent.style.display="none";
+        }*/
+        //更改Tag
+        function showPost() {
+            document.getElementsByClassName("posts")[0].style.display="block";
+            document.getElementsByClassName("mktcdt")[0].style.display="none";
+            document.getElementById("but1").style.color="#e2473f";
+            document.getElementById("but2").style.color="#888888";
+            document.getElementsByClassName("notice_line1")[0].style.display="block";
+            document.getElementsByClassName("notice_line2")[0].style.display="none";
+        }
+        function showMkt() {
+            document.getElementById("div1").style.display="none";
+            document.getElementById("div2").style.display="block";
+            document.getElementById("but1").style.color="#888888";
+            document.getElementById("but2").style.color="#e2473f";
+            document.getElementsByClassName("notice_line1")[0].style.display="none";
+            document.getElementsByClassName("notice_line2")[0].style.display="block";
+        }
+        //删除post
+        /*function removePost() {
+            var postcontent = document.getElementsByClassName("posts_inner")[0];
+            if (postcontent!=null)
+                postcontent.parentNode.removeChild(postcontent);
+        }*/
+        //***删除是依次删除，而不是根据选定的父级div来删除***
+        //class并不是唯一存在的，所以在getElement时有可能取到多个相同的class，用id来定义比较多
+       function removePost1() {
+           var postcontent = document.getElementById("pi1");
+           if (postcontent!=null)
+               postcontent.parentNode.removeChild(postcontent);
+       }
+       function removePost2() {
+           var postcontent = document.getElementById("pi2");
+           if (postcontent!=null)
+               postcontent.parentNode.removeChild(postcontent);
+       }
+       function removePost3() {
+           var postcontent = document.getElementById("pi3");
+           if (postcontent!=null)
+               postcontent.parentNode.removeChild(postcontent);
+       }
+    </script>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <div class="head">
+        <div class="return_button"></div>
+        <p class="mycol">我的收藏</p>
+        <p class="edit">编辑</p>
+    </div>
+    <div class="tag">
+        <p class="posts_button" id="but1" onclick="showPost()">帖子</p>
+        <p class="mktcdt_button" id="but2" onclick="showMkt()">行情</p>
+        <div class="notice_line1"></div>
+        <div class="notice_line2"></div>
+    </div>
+    <div class="all">
+        <div class="posts" id="div1">
+            <div class="posts_inner" id="pi1">
+                <p class="title">所有的光鲜亮丽都来源于你这句话的意思是？</p>
+                <img class="posts_img" src="newsimg1.png">
+                <p class="answer_num">792回答</p>
+                <p class="posts_time">刚刚</p>
+                <p class="delete" onclick="removePost1()">×</p>
+            </div>
+            <div class="posts_inner" id="pi2">
+                <p class="title">李雷和韩梅梅两个到底是从何而来？</p>
+                <img class="posts_img" src="newsimg2.png">
+                <p class="answer_num">792回答</p>
+                <p class="posts_time">刚刚</p>
+                <p class="delete" onclick="removePost2()">×</p>
+            </div>
+            <div class="posts_inner" id="pi3">
+                <p class="title">为什么绝地求生这个游戏有这么多人开挂？</p>
+                <img class="posts_img" src="newsimg3.png">
+                <p class="answer_num">792回答</p>
+                <p class="posts_time"></p>
+                <p class="delete" onclick="removePost3()">×</p>
+            </div>
+        </div>
+        <div class="mktcdt" id="div2">
+            <ul>
+                <li class="coin_infoframe1">
+                    <img class="coinimg1" src="coinimg1.png">
+                    <p class="coin_name">中国人民解放军</p>
+                    <p class="coin_kind">建军90周年</p>
+                </li>
+                <li class="coin_infoframe2">
+                    <img class="coinimg2" src="coinimg2.png">
+                    <p class="coin_name">中国熊猫金币</p>
+                    <p class="coin_kind">发行35周年</p>
+                </li>
+                <li class="coin_infoframe1">
+                    <img class="coinimg1" src="coinimg3.png">
+                    <p class="coin_name">中国人民解放军</p>
+                    <p class="coin_kind">建军90周年</p>
+                </li>
+                <li class="coin_infoframe2">
+                    <img class="coinimg2" src="coinimg4.png">
+                    <p class="coin_name">2014年贺岁</p>
+                    <p class="coin_kind">普通纪念币</p>
+                </li>
+                <li class="coin_infoframe1">
+                    <img class="coinimg1" src="coinimg5.png">
+                    <p class="coin_name">2017年鸡年纪念币</p>
+                    <p class="coin_kind">普通纪念币</p>
+                </li>
+                <li class="coin_infoframe2">
+                    <img class="coinimg2" src="coinimg6.png">
+                    <p class="coin_name">法西斯战争胜利</p>
+                    <p class="coin_kind">70周年</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

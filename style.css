@@ -1,0 +1,203 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.head{
+    position: relative;
+    width: 100%;
+    height: 1.47rem;
+    background-color: #e2473f;
+}
+.head .mycol{
+    width: 100%;
+    float: left;
+    font-size: 0.54rem;
+    text-align: center;
+    line-height: 1.47rem;
+    font-family: "PingFang SC";
+    color: white;
+}
+.head .edit{
+    position: absolute;
+    right: 0.4rem;
+    font-size: 0.45rem;
+    color: white;
+    line-height: 1.47rem;
+}
+.head .return_button{
+    width: 0.34rem;
+    height: 0.34rem;
+    border-bottom: 0.055rem white solid;
+    border-left: 0.055rem white solid;
+    position: absolute;
+    left: 0.4rem;
+    top: 0.5rem;
+    transform: rotate(45deg);
+}
+
+.tag{
+    width: 100%;
+    height: 1.22rem;
+    background-color: white;
+    border-bottom: 0.02rem #ececec solid;
+}
+.tag .posts_button{
+    position: absolute;
+    font-size: 0.45rem;
+    color: #e2473f;
+    left: 2.38rem;
+    line-height: 1.14rem;
+}
+.tag .mktcdt_button{
+    position: absolute;
+    right: 2.38rem;
+    font-size: 0.45rem;
+    color: #888888;
+    line-height: 1.14rem;
+}
+.tag .notice_line1{
+    width: 0.66rem;
+    height: 0.06rem;
+    background-color: #e2473f;
+    border-radius: 0.5rem;
+    position: absolute;
+    left: 2.5rem;
+    top: 2.63rem;
+}
+.tag .notice_line2{
+    width: 0.66rem;
+    height: 0.06rem;
+    background-color: #e2473f;
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 2.5rem;
+    top: 2.63rem;
+    display: none;
+}
+
+.posts{
+    position: absolute;
+    overflow-x: hidden;
+    width: 100%;
+    background-color: white;
+}
+.posts .posts_inner{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 2.98rem;
+    left: 0.4rem;
+    background-color: white;
+    border-bottom: 0.02rem #ececec solid;
+}
+.posts .posts_inner .title{
+    position: absolute;
+    margin-top: 0.4rem;
+    width: 7rem;
+    text-align: left;
+    font-size: 0.54rem;
+    letter-spacing: 0.015rem;
+}
+.posts .posts_inner .posts_img{
+    position: absolute;
+    margin-top: 0.4rem;
+    right: 0.8rem;
+    width: 3.37rem;
+    height: 2.2rem;
+}
+.posts .posts_inner .answer_num{
+    position: absolute;
+    bottom: 0.3rem;
+    font-size: 0.365rem;
+    color: #888888;
+    font-weight: lighter;
+}
+.posts .posts_inner .posts_time{
+     position: absolute;
+     left: 1.8rem;
+     bottom: 0.3rem;
+     font-size: 0.365rem;
+     color: #888888;
+     font-weight: lighter;
+ }
+.posts .posts_inner .delete{
+    position: absolute;
+    right: 4.55rem;
+    bottom: 0.2rem;
+    font-size: 0.7rem;
+    color: darkgray;
+    font-weight: lighter;
+}
+
+.all{
+    position: relative;
+}
+
+.mktcdt{
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    display: none;
+}
+.mktcdt .coin_infoframe1{
+    position: relative;
+    margin-left: 0.4rem;
+    float: left;
+    width: 5.225rem;
+    height: 5.34rem;
+    background-color: white;
+    list-style: none;
+}
+.mktcdt .coin_infoframe2{
+    position: relative;
+    margin-right: 0.4rem;
+    float: left;
+    width: 5.225rem;
+    height: 5.34rem;
+    background-color: white;
+    list-style: none;
+}
+.mktcdt .coin_infoframe1 .coinimg1{
+    position: absolute;
+    top: 1.16rem;
+    left: 1.26rem;
+    height: 2.35rem;
+    width: 2.35rem;
+}
+.mktcdt .coin_infoframe1 .coin_name{
+    width: 4.84rem;
+    margin-top: 3.8rem;
+    text-align: center;
+    font-family: "PingFang SC";
+    font-size: 0.39rem;
+    color: #444444;
+}
+.mktcdt .coin_infoframe1 .coin_kind{
+    width: 4.84rem;
+    text-align: center;
+    font-family: "PingFang SC";
+    font-size: 0.39rem;
+    color: #444444;
+}
+.mktcdt .coin_infoframe2 .coinimg2{
+    position: absolute;
+    top: 1.16rem;
+    right: 1.26rem;
+    height: 2.35rem;
+    width: 2.35rem;
+}
+.mktcdt .coin_infoframe2 .coin_name{
+    width: 5.6rem;
+    margin-top: 3.8rem;
+    text-align: center;
+    font-family: "PingFang SC";
+    font-size: 0.39rem;
+    color: #444444;
+}
+.mktcdt .coin_infoframe2 .coin_kind{
+    width: 5.6rem;
+    text-align: center;
+    font-family: "PingFang SC";
+    font-size: 0.39rem;
+    color: #444444;
+}
